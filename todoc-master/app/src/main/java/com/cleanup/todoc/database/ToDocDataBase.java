@@ -29,7 +29,7 @@ public abstract class ToDocDataBase extends RoomDatabase {
 
     public static void createInstance(Context context) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            ToDocDataBase.class, "ToDoc.db")
+                            ToDocDataBase.class, "ToDocDB.db")
                             .addCallback(prepopulateDatabase())
                             .build();
     }
@@ -61,12 +61,6 @@ public abstract class ToDocDataBase extends RoomDatabase {
                 contentProject3.put("name", "Projet Circus");
                 contentProject3.put("color", 0xFFA3CED2);
                 db.insert("ProjectEntity", SQLiteDatabase.CONFLICT_ABORT, contentProject3);
-
-                ContentValues contentValues = new ContentValues();
-                contentValues.put("projectId", 1);
-                contentValues.put("name", "test name");
-                contentValues.put("creationTimestamp", 1234);
-                db.insert("TaskEntity", SQLiteDatabase.CONFLICT_ABORT, contentValues);
             }
         };
     }

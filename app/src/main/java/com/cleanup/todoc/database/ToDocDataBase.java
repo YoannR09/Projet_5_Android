@@ -3,7 +3,6 @@ package com.cleanup.todoc.database;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
-import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.ContentValues;
@@ -15,7 +14,9 @@ import com.cleanup.todoc.dao.ProjectDao;
 import com.cleanup.todoc.dao.TaskDao;
 import com.cleanup.todoc.entity.ProjectEntity;
 import com.cleanup.todoc.entity.TaskEntity;
-import com.cleanup.todoc.model.Project;
+
+import java.sql.Timestamp;
+import java.util.Date;
 
 @Database(entities = {TaskEntity.class, ProjectEntity.class}, version = 1, exportSchema = false)
 public abstract class ToDocDataBase extends RoomDatabase {
@@ -27,11 +28,21 @@ public abstract class ToDocDataBase extends RoomDatabase {
     public abstract TaskDao taskDao();
     public abstract ProjectDao projectDao();
 
+    public static void createInstanceTest(Context context) {
+        INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                ToDocDataBase.class, new Timestamp(new Date().getTime()) + "ToDocTestAppDB.db")
+                .allowMainThreadQueries()
+                .addCallback(prepopulateDatabase())
+                .build();
+    }
+
     public static void createInstance(Context context) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            ToDocDataBase.class, "ToDocDB.db")
-                            .addCallback(prepopulateDatabase())
-                            .build();
+        if(INSTANCE == null) {
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                    ToDocDataBase.class, "ToDocAppDB.db")
+                    .addCallback(prepopulateDatabase())
+                    .build();
+        }
     }
 
     // --- INSTANCE ---
@@ -40,7 +51,7 @@ public abstract class ToDocDataBase extends RoomDatabase {
     }
 
 
-    private static Callback prepopulateDatabase(){
+    public static Callback prepopulateDatabase(){
         return new Callback() {
 
             @Override

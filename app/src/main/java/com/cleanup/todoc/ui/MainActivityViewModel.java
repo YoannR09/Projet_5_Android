@@ -6,6 +6,7 @@ import android.arch.lifecycle.ViewModel;
 import android.support.annotation.Nullable;
 
 import com.cleanup.todoc.entity.TaskEntity;
+import com.cleanup.todoc.factory.Repositories;
 import com.cleanup.todoc.factory.TaskRepository;
 import com.cleanup.todoc.mappers.TaskEntityTaskModelMapper;
 import com.cleanup.todoc.mappers.TaskModelToTaskViewModelMapper;
@@ -36,6 +37,17 @@ public class MainActivityViewModel extends ViewModel {
            return new TaskModelToTaskViewModelMapper().maps(tasks);
         });
         return taskModel;
+    }
+
+    /**
+     * Define Project for each TaskViewModel
+     * @param viewModelList
+     */
+    public void initProjectForEach(List<TaskViewModel> viewModelList) {
+        for(TaskViewModel taskView: viewModelList) {
+            taskView.setProject(Repositories.getProjectRepository()
+                    .getProjectByIdOnCurrentList((int) taskView.getTaskProjectId()));
+        }
     }
 
 

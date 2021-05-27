@@ -24,11 +24,11 @@ public class Repositories {
 
 
     public static TaskRepository createTaskRepository() {
-        return new TaskRepository(ToDocDataBase.getInstance().taskDao());
+        return new TaskRepository(ToDocDataBase.getInstance());
     }
 
     public static ProjectRepository createProjectRepository() {
-       return new ProjectRepository(ToDocDataBase.getInstance().projectDao());
+       return new ProjectRepository(ToDocDataBase.getInstance());
     }
 
     public static Executor provideExecutor(){ return Executors.newSingleThreadExecutor(); }

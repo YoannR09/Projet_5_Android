@@ -15,7 +15,6 @@ public class TaskModelToTaskViewModelMapper implements Mapper<Task, TaskViewMode
                 in.getProjectId(),
                 in.getName(),
                 in.getCreationTimestamp());
-        taskAdd.setProject(in.getProject());
         return taskAdd;
     }
 
@@ -28,7 +27,6 @@ public class TaskModelToTaskViewModelMapper implements Mapper<Task, TaskViewMode
                     task.getProjectId(),
                     task.getName(),
                     task.getCreationTimestamp());
-            taskAdd.setProject(task.getProject());
             tasksViewModel.add(taskAdd);
         }
         return tasksViewModel;

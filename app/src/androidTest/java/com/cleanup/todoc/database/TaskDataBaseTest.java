@@ -40,11 +40,8 @@ public class TaskDataBaseTest{
 
     @Before
     public void initDb() throws Exception {
-        this.database = Room.inMemoryDatabaseBuilder(InstrumentationRegistry.getContext(),
-                ToDocDataBase.class)
-                .allowMainThreadQueries()
-                .addCallback(prepopulateDatabase())
-                .build();
+        ToDocDataBase.createInstanceTest(InstrumentationRegistry.getInstrumentation().getTargetContext());
+        this.database = ToDocDataBase.getInstance();
     }
 
     @After
@@ -85,7 +82,7 @@ public class TaskDataBaseTest{
 
 
 
-    private static RoomDatabase.Callback prepopulateDatabase(){
+    public static RoomDatabase.Callback prepopulateDatabase(){
         return new RoomDatabase.Callback() {
 
             @Override

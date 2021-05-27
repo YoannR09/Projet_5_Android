@@ -71,7 +71,7 @@ public class TaskViewModel {
     public static class TaskAZComparator implements Comparator<TaskViewModel> {
         @Override
         public int compare(TaskViewModel left, TaskViewModel right) {
-            return left.taskName.compareTo(right.taskName);
+            return left.taskName.compareToIgnoreCase(right.taskName);
         }
     }
 
@@ -81,7 +81,7 @@ public class TaskViewModel {
     public static class TaskZAComparator implements Comparator<TaskViewModel> {
         @Override
         public int compare(TaskViewModel left, TaskViewModel right) {
-            return right.taskName.compareTo(left.taskName);
+            return right.taskName.compareToIgnoreCase(left.taskName);
         }
     }
 

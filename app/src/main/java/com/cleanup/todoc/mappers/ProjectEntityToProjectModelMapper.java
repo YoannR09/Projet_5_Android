@@ -16,7 +16,7 @@ public class ProjectEntityToProjectModelMapper implements Mapper<ProjectEntity, 
     public List<Project> maps(List<ProjectEntity> ins) {
         List<Project> arrayProjects = new ArrayList<>();
         for(ProjectEntity in: ins) {
-            arrayProjects.add(new Project(in.getId(), in.getName(), in.getColor()));
+            arrayProjects.add(map(in));
         }
         return arrayProjects;
     }

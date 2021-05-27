@@ -85,7 +85,7 @@ public class Task {
      */
     @Nullable
     public Project getProject() {
-        return Project.getProjectById(projectId);
+        return project;
     }
 
     /**

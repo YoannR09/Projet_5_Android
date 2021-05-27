@@ -3,8 +3,10 @@ package com.cleanup.todoc.ui;
 import android.arch.lifecycle.Observer;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.provider.Contacts;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.UiThread;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     /**
      * List of all projects available in the application
      */
-    private final Project[] allProjects = Project.getAllProjects();
+    // OLD private final Project[] allProjects = Project.getAllProjects();
 
     private MainActivityViewModel mainActivityViewModel;
 
@@ -98,15 +100,18 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
                 Repositories.provideExecutor());
 
         mainActivityViewModel.getTasks().observe(this, taskViewModels -> {
+            mainActivityViewModel.initProjectForEach(taskViewModels);
             adapter = new TasksAdapter(taskViewModels, this);
-            if (taskViewModels.size() == 0) {
-                lblNoTasks.setVisibility(View.VISIBLE);
-                listTasks.setVisibility(View.GONE);
-            } else {
-                lblNoTasks.setVisibility(View.GONE);
-                listTasks.setVisibility(View.VISIBLE);
-            }
-            listTasks.setAdapter(adapter);
+            runOnUiThread(() -> {
+                if (taskViewModels.size() == 0) {
+                    lblNoTasks.setVisibility(View.VISIBLE);
+                    listTasks.setVisibility(View.GONE);
+                } else {
+                    lblNoTasks.setVisibility(View.GONE);
+                    listTasks.setVisibility(View.VISIBLE);
+                }
+                listTasks.setAdapter(adapter);
+            });
         });
 
         listTasks = findViewById(R.id.list_tasks);
@@ -268,7 +273,6 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
 
         // This instead of listener to positive button in order to avoid automatic dismiss
         dialog.setOnShowListener(dialogInterface -> {
-
             Button button = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
             button.setOnClickListener(view -> onPositiveButtonClick(dialog));
         });
@@ -280,7 +284,8 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      * Sets the data of the Spinner with projects to associate to a new task
      */
     private void populateDialogSpinner() {
-        final ArrayAdapter<Project> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, allProjects);
+        final ArrayAdapter<Project> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,
+                Repositories.getProjectRepository().getCurrentList());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         if (dialogSpinner != null) {
             dialogSpinner.setAdapter(adapter);

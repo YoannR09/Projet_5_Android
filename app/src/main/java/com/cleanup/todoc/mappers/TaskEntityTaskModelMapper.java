@@ -13,11 +13,14 @@ public class TaskEntityTaskModelMapper{
 
 
     public Task map(TaskEntity t) {
-        Task taskAdd = new Task(t.getId(),
-                t.getProjectId(),
-                t.getName(),
-                t.getCreationTimestamp());
-        return taskAdd;
+        if(t != null) {
+            Task taskAdd = new Task(t.getId(),
+                    t.getProjectId(),
+                    t.getName(),
+                    t.getCreationTimestamp());
+            return taskAdd;
+        }
+        return null;
     }
 
 

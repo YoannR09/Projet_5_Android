@@ -11,33 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="329603c9-c58a-4992-b41a-f3ca304ce089" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/release/app-release.apk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/release/output-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/ProjectEntityToProjectMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/TaskEntityToTaskModelMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/TaskModelToTaskViewModelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/model/ProjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/model/TaskTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/viewModel/TaskViewModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Results - Tests_in_'com_cleanup_todoc'.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test Results - todoc_in_app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/database/ProjectDataBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/repo/TaskRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/LiveDataTestUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/MainActivityInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/MainActivityInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/database/TaskDataBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/cleanup/todoc/database/TaskDataBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/TodocApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/TodocApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/ToDocDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/database/ToDocDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/di/UseCases.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/factory/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/factory/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/factory/Repositories.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/factory/Repositories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/factory/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/factory/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/entity/ProjectEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/entity/ProjectEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/mappers/ProjectEntityToProjectModelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/mappers/ProjectEntityToProjectModelMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/mappers/TaskEntityTaskModelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/mappers/TaskEntityTaskModelMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/mappers/TaskModelToTaskViewModelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/mappers/TaskModelToTaskViewModelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivityViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/ui/MainActivityViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/viewModel/TaskViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/cleanup/todoc/viewModel/TaskViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/TaskUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/cleanup/todoc/TaskUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +31,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5_API_30" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -93,7 +80,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MaReu" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -106,24 +93,26 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.cleanup.todoc.database" />
       <recent name="com.cleanup.todoc" />
+      <recent name="com.cleanup.todoc.database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cleanup.todoc.repo" />
+      <recent name="com.cleanup.todoc.database" />
       <recent name="com.cleanup.todoc.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Android JUnit.todoc in app">
-    <configuration name="TaskModelToTaskViewModelTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Android Instrumented Tests.Tests in 'com.cleanup.todoc'">
+    <configuration name="TaskDataBaseTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cleanup.todoc.*" />
+          <option name="PATTERN" value="com.cleanup.todoc.database.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.cleanup.todoc" />
-      <option name="MAIN_CLASS_NAME" value="com.cleanup.todoc.TaskModelToTaskViewModelTest" />
+      <option name="PACKAGE_NAME" value="com.cleanup.todoc.database" />
+      <option name="MAIN_CLASS_NAME" value="com.cleanup.todoc.database.TaskDataBaseTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -134,28 +123,12 @@
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.cleanup.todoc.repo.*" />
+          <option name="PATTERN" value="com.cleanup.todoc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.cleanup.todoc.repo" />
       <option name="MAIN_CLASS_NAME" value="com.cleanup.todoc.repo.TaskRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cleanup.todoc.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cleanup.todoc.model" />
-      <option name="MAIN_CLASS_NAME" value="com.cleanup.todoc.model.TaskTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -229,6 +202,54 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProjectDataBaseTest" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="com.cleanup.todoc.database.ProjectDataBaseTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="INCLUDE_GRADLE_EXTRA_OPTIONS" value="true" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests in 'com.cleanup.todoc'" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="1" />
@@ -279,10 +300,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Android JUnit.todoc in app" />
         <item itemvalue="Android Instrumented Tests.Tests in 'com.cleanup.todoc'" />
-        <item itemvalue="Android JUnit.TaskTest" />
-        <item itemvalue="Android JUnit.TaskModelToTaskViewModelTest" />
+        <item itemvalue="Android JUnit.todoc in app" />
+        <item itemvalue="Android Instrumented Tests.ProjectDataBaseTest" />
+        <item itemvalue="Android JUnit.TaskDataBaseTest" />
         <item itemvalue="Android JUnit.TaskRepositoryTest" />
       </list>
     </recent_temporary>
@@ -324,18 +345,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="25" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1622058824813" />
-    <state x="173" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1617724405729">
+    <state x="173" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1622277742896">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="173" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1617724405729" />
-    <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1619291539118">
+    <state x="173" y="266" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1622277742896" />
+    <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1622277779540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1619291539118" />
-    <state x="438" y="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1617724407595">
+    <state x="438" y="200" width="404" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1622277779540" />
+    <state x="438" y="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1622277746161">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="438" y="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680@0.0.1280.680" timestamp="1617724407595" />
+    <state x="438" y="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680@0.0.1280.680" timestamp="1622277746161" />
     <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1618945911376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -344,26 +365,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="385" y="178" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1620401768539" />
-    <state x="422" y="68" key="FileChooserDialogImpl" timestamp="1620240084573">
+    <state x="422" y="68" key="FileChooserDialogImpl" timestamp="1623178555975">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="422" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1620240084573" />
-    <state width="1236" height="191" key="GridCell.Tab.0.bottom" timestamp="1622141700108">
+    <state x="422" y="68" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1623178555975" />
+    <state width="1236" height="191" key="GridCell.Tab.0.bottom" timestamp="1622575026325">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="191" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622141700108" />
-    <state width="1236" height="191" key="GridCell.Tab.0.center" timestamp="1622141700108">
+    <state width="1236" height="191" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1622575026325" />
+    <state width="1236" height="191" key="GridCell.Tab.0.center" timestamp="1622575026325">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="191" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622141700108" />
-    <state width="1236" height="191" key="GridCell.Tab.0.left" timestamp="1622141700107">
+    <state width="1236" height="191" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1622575026325" />
+    <state width="1236" height="191" key="GridCell.Tab.0.left" timestamp="1622575026325">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="191" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622141700107" />
-    <state width="1236" height="191" key="GridCell.Tab.0.right" timestamp="1622141700108">
+    <state width="1236" height="191" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1622575026325" />
+    <state width="1236" height="191" key="GridCell.Tab.0.right" timestamp="1622575026325">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="191" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622141700108" />
+    <state width="1236" height="191" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1622575026325" />
     <state width="1236" height="203" key="GridCell.Tab.1.bottom" timestamp="1620402198279">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -392,14 +413,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1617738336797" />
-    <state x="371" y="96" width="538" height="495" key="extract.method.dialog" timestamp="1621775875205">
+    <state x="461" y="168" key="export.test.results" timestamp="1622573988543">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="96" width="538" height="495" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1621775875205" />
+    <state x="461" y="168" key="export.test.results/0.0.1280.680@0.0.1280.680" timestamp="1622573988543" />
+    <state x="371" y="96" width="538" height="495" key="extract.method.dialog" timestamp="1622278113525">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="96" width="538" height="495" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1622278113525" />
     <state x="0" y="0" width="612" height="680" key="find.popup" timestamp="1620401835179">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="612" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1620401835179" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1622278678632">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1622278678632" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/todoc_master$todoc_in_app.ic" NAME="todoc in app Coverage Results" MODIFIED="1622141700056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

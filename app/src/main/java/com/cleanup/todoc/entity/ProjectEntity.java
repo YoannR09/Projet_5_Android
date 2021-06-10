@@ -5,8 +5,6 @@ package com.cleanup.todoc.entity;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-import com.cleanup.todoc.model.Task;
-
 @Entity
 public class ProjectEntity {
 

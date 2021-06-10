@@ -10,12 +10,15 @@ public class TaskModelToTaskViewModelMapper implements Mapper<Task, TaskViewMode
 
     @Override
     public TaskViewModel map(Task in) {
-        TaskViewModel taskAdd = new TaskViewModel(
-                in.getId(),
-                in.getProjectId(),
-                in.getName(),
-                in.getCreationTimestamp());
-        return taskAdd;
+        if(in != null) {
+            TaskViewModel taskAdd = new TaskViewModel(
+                    in.getId(),
+                    in.getProjectId(),
+                    in.getName(),
+                    in.getCreationTimestamp());
+            return taskAdd;
+        }
+        return null;
     }
 
     @Override

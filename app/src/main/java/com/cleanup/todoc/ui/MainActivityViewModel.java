@@ -3,14 +3,11 @@ package com.cleanup.todoc.ui;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
-import android.support.annotation.Nullable;
 
 import com.cleanup.todoc.entity.TaskEntity;
 import com.cleanup.todoc.factory.Repositories;
 import com.cleanup.todoc.factory.TaskRepository;
-import com.cleanup.todoc.mappers.TaskEntityTaskModelMapper;
 import com.cleanup.todoc.mappers.TaskModelToTaskViewModelMapper;
-import com.cleanup.todoc.model.Task;
 import com.cleanup.todoc.viewModel.TaskViewModel;
 
 import java.util.List;

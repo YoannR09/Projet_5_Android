@@ -9,7 +9,10 @@ import java.util.List;
 public class ProjectEntityToProjectModelMapper implements Mapper<ProjectEntity, Project> {
     @Override
     public Project map(ProjectEntity in) {
-        return new Project(in.getId(), in.getName(), in.getColor());
+        if(in != null) {
+            return new Project(in.getId(), in.getName(), in.getColor());
+        }
+        return null;
     }
 
     @Override

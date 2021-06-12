@@ -1,7 +1,5 @@
 package com.cleanup.todoc.factory;
 
-import android.content.Context;
-
 import com.cleanup.todoc.database.ToDocDataBase;
 
 import java.util.concurrent.Executor;

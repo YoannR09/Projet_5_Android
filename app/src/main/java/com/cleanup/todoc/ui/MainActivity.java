@@ -1,12 +1,9 @@
 package com.cleanup.todoc.ui;
 
-import android.arch.lifecycle.Observer;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.provider.Contacts;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.UiThread;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,15 +19,13 @@ import android.widget.TextView;
 
 import com.cleanup.todoc.R;
 import com.cleanup.todoc.entity.TaskEntity;
+import com.cleanup.todoc.factory.ProjectRepository;
 import com.cleanup.todoc.factory.Repositories;
 import com.cleanup.todoc.model.Project;
-import com.cleanup.todoc.model.Task;
 import com.cleanup.todoc.viewModel.TaskViewModel;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
-import java.util.List;
 
 /**
  * <p>Home activity of the application which is displayed when the user opens the app.</p>
@@ -71,20 +66,9 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
     @Nullable
     private Spinner dialogSpinner = null;
 
-    /**
-     * The RecyclerView which displays the list of tasks
-     */
-    // Suppress warning is safe because variable is initialized in onCreate
-    @SuppressWarnings("NullableProblems")
-    @NonNull
     private RecyclerView listTasks;
 
-    /**
-     * The TextView displaying the empty state
-     */
-    // Suppress warning is safe because variable is initialized in onCreate
-    @SuppressWarnings("NullableProblems")
-    @NonNull
+
     private TextView lblNoTasks;
 
     private TasksAdapter adapter;
@@ -100,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
                 Repositories.provideExecutor());
 
         mainActivityViewModel.getTasks().observe(this, taskViewModels -> {
+            assert taskViewModels != null;
             mainActivityViewModel.initProjectForEach(taskViewModels);
             adapter = new TasksAdapter(taskViewModels, this);
             runOnUiThread(() -> {
@@ -285,7 +270,7 @@ public class MainActivity extends AppCompatActivity implements TasksAdapter.Dele
      */
     private void populateDialogSpinner() {
         final ArrayAdapter<Project> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,
-                Repositories.getProjectRepository().getCurrentList());
+                ProjectRepository.getCurrentList());
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         if (dialogSpinner != null) {
             dialogSpinner.setAdapter(adapter);

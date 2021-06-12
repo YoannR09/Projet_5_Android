@@ -28,37 +28,26 @@ public class TaskRepository {
         return mapperTask(dao.taskDao().getTask(id));
     }
 
-    public LiveData<List<Task>> getProjectsByTaskId(long taskId) {
-        return mappersTask(dao.taskDao().getProjectsByTaskId(taskId));
+    public void insertTask(TaskEntity taskEntity) {
+        dao.taskDao().insertTask(taskEntity);
     }
 
-    public long insertTask(TaskEntity taskEntity) {
-        return dao.taskDao().insertTask(taskEntity);
+    public void updateTask(TaskEntity taskEntity) {
+        dao.taskDao().updateTask(taskEntity);
     }
 
-    public int updateTask(TaskEntity taskEntity) {
-        return dao.taskDao().updateTask(taskEntity);
-    }
-
-    public int deleteTask(long taskId) {
-        return dao.taskDao().deleteTask(taskId);
+    public void deleteTask(long taskId) {
+        dao.taskDao().deleteTask(taskId);
     }
 
     public LiveData<Task> mapperTask(LiveData<TaskEntity> taskEntity) {
-        LiveData<Task> taskModel = Transformations.map(taskEntity, task -> {
-            return new TaskEntityTaskModelMapper().map(task);
-        });
-        return taskModel;
+        return Transformations.map(taskEntity, task -> new TaskEntityTaskModelMapper().map(task));
     }
 
     public LiveData<List<Task>> mappersTask(LiveData<List<TaskEntity>> tasksEntity) {
-        LiveData<List<Task>> taskModel = Transformations.map(tasksEntity, tasks -> {
-            List<TaskEntity> taskList = new ArrayList<>();
-            for(TaskEntity task: tasks) {
-                taskList.add(task);
-            }
+        return Transformations.map(tasksEntity, tasks -> {
+            List<TaskEntity> taskList = new ArrayList<>(tasks);
             return new TaskEntityTaskModelMapper().maps(taskList);
         });
-        return taskModel;
     }
 }

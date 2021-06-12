@@ -28,10 +28,4 @@ public class ProjectEntityToProjectMapperTest {
         assertEquals(project.getColor(), 2314122);
     }
 
-    @Test
-    public void maps() {
-        // GIVEN
-        ProjectEntity projectEntity1 = new ProjectEntity(12,"name",2314122);
-        ProjectEntity projectEntity2 = new ProjectEntity(23,"project",34251254);
-    }
 }

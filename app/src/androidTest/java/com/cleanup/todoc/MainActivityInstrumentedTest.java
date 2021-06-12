@@ -1,7 +1,6 @@
 package com.cleanup.todoc;
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule;
-import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
@@ -13,11 +12,12 @@ import android.widget.TextView;
 import com.cleanup.todoc.database.ToDocDataBase;
 import com.cleanup.todoc.ui.MainActivity;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import java.util.Objects;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -44,7 +44,7 @@ public class MainActivityInstrumentedTest {
     public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
 
     @Before
-    public void initDb() throws Exception {
+    public void initDb() {
         ToDocDataBase.createInstanceTest(InstrumentationRegistry.getInstrumentation().getTargetContext());
         rule.launchActivity(new Intent());
     }
@@ -64,7 +64,7 @@ public class MainActivityInstrumentedTest {
         // Check that recyclerView is displayed
         assertThat(listTasks.getVisibility(), equalTo(View.VISIBLE));
         // Check that it contains one element only
-        assertThat(listTasks.getAdapter().getItemCount(), equalTo(1));
+        assertThat(Objects.requireNonNull(listTasks.getAdapter()).getItemCount(), equalTo(1));
 
         onView(withId(R.id.img_delete)).perform(click());
 

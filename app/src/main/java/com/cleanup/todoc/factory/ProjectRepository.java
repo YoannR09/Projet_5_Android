@@ -18,15 +18,13 @@ public class ProjectRepository {
 
     public ProjectRepository(ToDocDataBase dao) {
         this.dao = dao;
-        mappersProject(dao.projectDao().getProjects()).observeForever((obs) -> {
-            currentList = obs;
-        });
+        mappersProject(dao.projectDao().getProjects()).observeForever((obs) -> currentList = obs);
     }
 
-    public LiveData<List<Project>> getProjects() {
-        return mappersProject(dao.projectDao().getProjects());
+    private static List<Project> apply(List<ProjectEntity> projects) {
+        return new ProjectEntityToProjectModelMapper().maps(projects);
     }
-
+    /*
     public LiveData<Project> getProject(long id) {
         return mapperProject(dao.projectDao().getProject(id));
     }
@@ -43,26 +41,12 @@ public class ProjectRepository {
         return dao.projectDao().deleteProject(projectId);
     }
 
-    public LiveData<Project> mapperProject(LiveData<ProjectEntity> projectEntity) {
-        LiveData<Project> projectModel = Transformations.map(projectEntity, project -> {
-            return new ProjectEntityToProjectModelMapper().map(project);
-        });
-        return projectModel;
-    }
+     */
 
     public LiveData<List<Project>> mappersProject(LiveData<List<ProjectEntity>> projectsEntity) {
-        LiveData<List<Project>> projectsModel = Transformations.map(projectsEntity, projects -> {
-            return new ProjectEntityToProjectModelMapper().maps(projects);
-        });
-        return projectsModel;
+        return Transformations.map(projectsEntity, ProjectRepository::apply);
     }
 
-    /**
-     * Return Project with project id
-     * Find this on current Project list
-     * @param projectId
-     * @return
-     */
     public Project getProjectByIdOnCurrentList(int projectId) {
         for (Project project : currentList) {
             if (project.getId() == projectId)

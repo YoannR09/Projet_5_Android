@@ -24,6 +24,7 @@ import org.junit.runner.RunWith;
 
 import java.util.Date;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
@@ -41,13 +42,13 @@ public class TaskRepositoryTest {
     public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
 
     @Before
-    public void initDb() throws Exception {
+    public void initDb() {
         ToDocDataBase.createInstanceTest(InstrumentationRegistry.getInstrumentation().getTargetContext());
         this.database = ToDocDataBase.getInstance();
     }
 
     @After
-    public void closeDb() throws Exception {
+    public void closeDb() {
         database.close();
     }
 
@@ -60,8 +61,8 @@ public class TaskRepositoryTest {
     public void insertAndGet() throws InterruptedException {
         getTaskRepository().insertTask(TASK_DEMO);
         Task task = LiveDataTestUtil.getValue(getTaskRepository().getTask(TASK_ID));
-        assertTrue(task.getName().equals(TASK_DEMO.getName()));
-        assertTrue(task.getId() == TASK_DEMO.getId());
+        assertEquals(task.getName(), TASK_DEMO.getName());
+        assertEquals(task.getId(), TASK_DEMO.getId());
     }
 
 
@@ -69,7 +70,7 @@ public class TaskRepositoryTest {
     public void insertAndDelete() throws InterruptedException {
         getTaskRepository().insertTask(TASK_DEMO);
         Task task = LiveDataTestUtil.getValue(getTaskRepository().getTask(TASK_ID));
-        assertTrue(task.getName().equals(TASK_DEMO.getName()));
+        assertEquals(task.getName(), TASK_DEMO.getName());
         getTaskRepository().deleteTask(TASK_ID);
 
         //TEST
@@ -81,12 +82,12 @@ public class TaskRepositoryTest {
     public void insertAndUpdate() throws InterruptedException {
         getTaskRepository().insertTask(TASK_DEMO);
         Task task = LiveDataTestUtil.getValue(getTaskRepository().getTask(TASK_ID));
-        assertTrue(task.getName().equals(TASK_DEMO.getName()));
+        assertEquals(task.getName(), TASK_DEMO.getName());
         task.setName("update");
         TaskEntity taskUpdate = new TaskEntity(task.getId(),task.getProjectId(), "update", task.getCreationTimestamp());
         getTaskRepository().updateTask(taskUpdate);
         Task taskUpdated = LiveDataTestUtil.getValue(getTaskRepository().getTask(TASK_ID));
-        assertTrue(taskUpdated.getName().equals("update"));
+        assertEquals("update", taskUpdated.getName());
     }
 
 

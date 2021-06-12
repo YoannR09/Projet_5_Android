@@ -27,18 +27,13 @@ public class MainActivityViewModel extends ViewModel {
 
     /**
      * Return task view model list mapped
-     * @return
      */
     public LiveData<List<TaskViewModel>> getTasks() {
-        LiveData<List<TaskViewModel>> taskModel = Transformations.map(taskRepository.getTasks(), tasks -> {
-           return new TaskModelToTaskViewModelMapper().maps(tasks);
-        });
-        return taskModel;
+        return Transformations.map(taskRepository.getTasks(), tasks -> new TaskModelToTaskViewModelMapper().maps(tasks));
     }
 
     /**
      * Define Project for each TaskViewModel
-     * @param viewModelList
      */
     public void initProjectForEach(List<TaskViewModel> viewModelList) {
         for(TaskViewModel taskView: viewModelList) {
@@ -49,15 +44,11 @@ public class MainActivityViewModel extends ViewModel {
 
 
     public void addTask(TaskEntity task) {
-        executor.execute(() -> {
-            taskRepository.insertTask(task);
-        });
+        executor.execute(() -> taskRepository.insertTask(task));
     }
 
     public void deleteTask(long taskId) {
-        executor.execute(() -> {
-            taskRepository.deleteTask(taskId);
-        });
+        executor.execute(() -> taskRepository.deleteTask(taskId));
     }
 
 
